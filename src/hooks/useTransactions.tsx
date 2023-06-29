@@ -1,11 +1,7 @@
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useState,
-} from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 
 interface Transaction {
+  id: number;
   title: string;
   amount: number;
   type: string;
@@ -22,6 +18,7 @@ interface TransactionsProviderProps {
 interface TransactionsContextData {
   transactions: Transaction[];
   createTransaction: (transaction: TransactionInput) => Promise<void>;
+  handleDeleteElement: (id: number) => void;
 }
 
 export const TransactionsContext = createContext<TransactionsContextData>(
@@ -35,6 +32,7 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
     const { amount, category, title, type } = transactionInput;
 
     const newTransactionValue = {
+      id: Math.random(),
       amount,
       category,
       title,
@@ -48,11 +46,19 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
     ]);
   }
 
+  const handleDeleteElement = (id: number) => {
+    const updatedTransactions = transactions.filter(
+      (transaction) => transaction.id !== id
+    );
+    setTransactions(updatedTransactions);
+  };
+
   return (
     <TransactionsContext.Provider
       value={{
         transactions,
         createTransaction,
+        handleDeleteElement,
       }}
     >
       {children}
