@@ -2,13 +2,12 @@
 
 import { Header } from "@/components/Header";
 import styles from "./styles.module.scss";
-import Modal from "react-modal";
 import { Dashboard } from "@/components/Dashboard";
 import { TransactionsProvider } from "@/hooks/useTransactions";
 import { useState } from "react";
 import { NewTransactionModal } from "@/components/NewTransactionModal";
 
-export default function Home() {
+export default function HomePage() {
   const [isNewTransactionsModalOpen, setIsNewTransactionsModalOpen] =
     useState(false);
 

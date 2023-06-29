@@ -1,0 +1,39 @@
+
+.container {
+    margin-top: 4rem;
+
+  table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+
+    th {
+      color: #B9B9B9;
+      font-weight: 400;
+      padding: 1rem 2rem;
+      text-align: left;
+      line-height: 1.5rem;
+      font-size: 0.875rem;
+    }
+
+    td {
+      padding: 1rem 2rem;
+      border: 0;
+      background: #ffffff;
+      color: #4C5A5A;
+      border-radius: 0.25rem;
+      font-size: 1.125rem;
+
+      &:first-child {
+        color: #4C5A5A;
+      }
+
+      &.deposit {
+        color: #06D7A5;
+      }
+
+      &.withdraw {
+        color: #DB3766;
+      }
+    }
+  }
+}

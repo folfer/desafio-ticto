@@ -5,8 +5,8 @@ import styles from "./styles.module.scss";
 export function Dashboard() {
   return (
     <main className={styles.container}>
-      <Sumarry />
-      <TransactionsTable />
+      <Sumarry data-testid="summary" />
+      <TransactionsTable data-testid="transactionsTable" />
     </main>
   );
 }

@@ -1,11 +1,9 @@
 import { FormEvent, useState } from "react";
 import Modal from "react-modal";
 import styles from "./styles.module.scss";
-import { useTransactions } from "@/hooks/useTransactions";
 
 import incomeImg from "../../../public/up.svg";
 import outcomeImg from "../../../public/down.svg";
-import Image from "next/image";
 
 interface NewTransactionModalProps {
   isOpen: boolean;
@@ -16,29 +14,12 @@ export function NewTransactionModal({
   isOpen,
   onRequestClose,
 }: NewTransactionModalProps) {
-  const { createTransaction } = useTransactions();
 
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState(0);
   const [type, setType] = useState("deposit");
   const [category, setCategory] = useState("");
 
-  async function handleCreateNewTransaction(event: FormEvent) {
-    event.preventDefault();
-
-    await createTransaction({
-      title,
-      amount,
-      category,
-      type,
-    });
-
-    setTitle("");
-    setAmount(0);
-    setCategory("");
-    setType("deposit");
-    onRequestClose();
-  }
   return (
     <Modal
       isOpen={isOpen}
@@ -54,7 +35,7 @@ export function NewTransactionModal({
         X
       </button>
 
-      <form data-testId="newTransactionModal_component" className={styles.container} onSubmit={handleCreateNewTransaction}>
+      <form className={styles.container} onSubmit={() => {}}>
         <h2>Cadastrar transação</h2>
 
         <input
@@ -78,7 +59,7 @@ export function NewTransactionModal({
               setType("deposit");
             }}
           >
-            <Image src={incomeImg} alt="Entrada" />
+            <img src={incomeImg} alt="Entrada" />
             <span>Entrada</span>
           </button>
 
@@ -89,7 +70,7 @@ export function NewTransactionModal({
               setType("withdraw");
             }}
           >
-            <Image src={outcomeImg} alt="Saída" />
+            <img src={outcomeImg} alt="Saída" />
             <span>Saída</span>
           </button>
         </div>

@@ -1,0 +1,42 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: -7rem;
+  height: 300px;
+
+  div {
+    display: flex;
+    margin-top: 70px;
+    height: 200px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  
+    background: #FFFFFF;
+    padding: 1.5rem 2rem;
+    color: #4E5555;
+    gap: 30px;
+    
+    header {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    strong {
+      display: block;
+      margin-top: 1rem;
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 3rem;
+    }
+
+    &:last-child {
+      background: #06D6A2;
+      color: #ffffff;
+    }
+  }
+}
