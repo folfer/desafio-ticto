@@ -17,30 +17,33 @@
 
 # 📌 Contents
 
-* [Screenshots](#camera-screenshot) 
-* [Technologies](#rocket-technologies) 
-* [How to Run](#computer-how-to-run)
-* [Issues](#bug-issues)
-* [Contributing](#sparkles-issues)
-* [License](#page_facing_up-license)
+- [Screenshots](#camera-screenshot)
+- [Technologies](#rocket-technologies)
+- [How to Run](#computer-how-to-run)
+- [Issues](#bug-issues)
+- [Contributing](#sparkles-issues)
+- [License](#page_facing_up-license)
 
 # :camera: Screenshots
+
 <div align="center">
    <img src="./.github/coverage.png" width="400px">
    <img src="./.github/storybook.png" width="400px">
-   <img src="./.github/empty.png" width="400px">
+   <img src="./.github/perm.png" width="400px">
    <img src="./.github/fill.png" width="400px">
 </div>
 
 # :rocket: Technologies
+
 This project was made using the follow technologies:
 
-* [Typescript](https://www.typescriptlang.org/)      
-* [NextJs](https://nextjs.org/)      
-* [Styled Components](https://styled-components.com/)
-* [SonarQube](https://www.sonarsource.com/products/sonarqube/)
-* [StoryBook](https://storybook.js.org/)
-* [React Test Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Typescript](https://www.typescriptlang.org/)
+- [NextJs](https://nextjs.org/)
+- [Styled Components](https://styled-components.com/)
+- [SonarQube](https://www.sonarsource.com/products/sonarqube/)
+- [StoryBook](https://storybook.js.org/)
+- [React Test Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Github Actions](https://docs.github.com/en/actions)
 
 # :computer: How to run
 
@@ -65,6 +68,7 @@ $ yarn test
 # Run Test Coverage
 $ yarn test:coverage
 ```
+
 <p>
   Go to http://localhost:3000/ to see the result Web.
 </p>
@@ -76,8 +80,6 @@ $ yarn test:coverage
 <p>
   Go to http://localhost:6006/ to see the result StoryBook.
 </p>
-
-
 
 # :bug: Issues
 
@@ -93,11 +95,10 @@ Create a <a href="https://github.com/folfer/issues">new issue report</a>, it wil
 # :page_facing_up: License
 
 This project is under the [MIT license](./LICENSE).
-Made with 💖 by [Victor Calazans](https://www.linkedin.com/in/victorcalazansramos/). 
+Made with 💖 by [Victor Calazans](https://www.linkedin.com/in/victorcalazansramos/).
 
 Thank you! 🌠
 
-
 # See website in deploy
 
-*[Deploy Vercel](https://desafio-ticto.vercel.app/)
+\*[Deploy Vercel](https://desafio-ticto.vercel.app/)
