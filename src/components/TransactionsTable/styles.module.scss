@@ -18,6 +18,7 @@
       h2 {
         font-size: 1.5rem;
         font-weight: 400;
+        color: var(--text-title);
       }
 
       p {
@@ -28,11 +29,11 @@
 
     .grid {
       display: grid;
-      grid-template-columns: 1fr .5fr;
+      grid-template-columns: 1fr .5fr 15px;
       grid-template-areas:
-        'first first'
-        'second second'
-        'third fourth'
+        'first first fifth'
+        'second second second'
+        'third fourth fourth'
       ;
 
       column-gap: 10px;
@@ -43,6 +44,11 @@
 
       color: var(--text-table);
       background: var(--white);
+
+      button {
+        background: transparent;
+        border: 0;
+      }
 
       span:nth-child(1) {
         grid-area: first;
@@ -62,6 +68,10 @@
       span:nth-child(4) {
         grid-area: fourth;
         text-align: end;
+      }
+
+      span:nth-child(5) {
+        grid-area: fifth;
       }
 
       span:nth-child(3),
@@ -94,9 +104,10 @@
     section {
       .head {
         display: grid;
-        grid-template-columns: 1fr repeat(3, .5fr);
+        grid-template-columns: 1fr repeat(3, .5fr) 15px;
+        column-gap: 10px;
 
-        padding: 1rem 0;
+        padding: 1rem 2rem;
 
         font-weight: 400;
         font-size: 0.875rem;
@@ -116,13 +127,14 @@
       }
 
       .grid {
-        grid-template-columns: 1fr repeat(3, .5fr);
-        grid-template-areas: 'first second third fourth';
+        grid-template-columns: 1fr repeat(3, .5fr) 15px;
+        grid-template-areas: 'first second third fourth fifth';
 
         span:nth-child(1),
         span:nth-child(2),
         span:nth-child(3),
-        span:nth-child(4) {
+        span:nth-child(4),
+        span:nth-child(5) {
           font-size: 1.125rem;
           text-align: start;
         }
