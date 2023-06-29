@@ -28,8 +28,8 @@
 <div align="center">
    <img src="./.github/coverage.png" width="400px">
    <img src="./.github/storybook.png" width="400px">
-   <img src="./.github/screen3.png" width="400px">
-   <img src="./.github/screen4.png" width="400px">
+   <img src="./.github/empty.png" width="400px">
+   <img src="./.github/fill.png" width="400px">
 </div>
 
 # :rocket: Technologies
