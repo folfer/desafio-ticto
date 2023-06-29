@@ -27,7 +27,7 @@
 # :camera: Screenshots
 <div align="center">
    <img src="./.github/coverage.png" width="400px">
-   <img src="./.github/screen2.png" width="400px">
+   <img src="./.github/storybook.png" width="400px">
    <img src="./.github/screen3.png" width="400px">
    <img src="./.github/screen4.png" width="400px">
 </div>
@@ -65,10 +65,18 @@ $ yarn test
 # Run Test Coverage
 $ yarn test:coverage
 ```
+<p>
+  Go to http://localhost:3000/ to see the result Web.
+</p>
 
-Go to http://localhost:3000/ to see the result Web.
-Go to http://localhost:9000/ to see the result Sonar.
-Go to http://localhost:6006/ to see the result StoryBook.
+<p>
+  Go to http://localhost:9000/ to see the result Sonar.
+</p>
+
+<p>
+  Go to http://localhost:6006/ to see the result StoryBook.
+</p>
+
 
 
 # :bug: Issues
@@ -88,3 +96,8 @@ This project is under the [MIT license](./LICENSE).
 Made with 💖 by [Victor Calazans](https://www.linkedin.com/in/victorcalazansramos/). 
 
 Thank you! 🌠
+
+
+# See website in deploy
+
+*[Deploy Vercel](https://desafio-ticto.vercel.app/)
