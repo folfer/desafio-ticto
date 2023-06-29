@@ -59,16 +59,17 @@ export function NewTransactionModal({
       overlayClassName="react-modal-overlay"
       className="react-modal-content"
     >
-      <button
-        type="button"
-        onClick={onRequestClose}
-        className="react-modal-close"
-      >
-        <Image src={close} alt="Fechar" />
-      </button>
-
       <form data-testId="newTransactionModal_component" className={styles.container} onSubmit={handleCreateNewTransaction}>
-        <h2>Cadastrar transação</h2>
+        <legend>
+          <h2>Cadastrar transação</h2>
+          <button
+            type="button"
+            onClick={onRequestClose}
+            className="react-modal-close"
+          >
+            <Image src={close} alt="Fechar" />
+          </button>
+        </legend>
 
         <input
           placeholder="Nome"

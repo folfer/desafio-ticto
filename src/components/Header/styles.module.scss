@@ -10,15 +10,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 
   button {
     font-size: 1rem;
     color: var(--white);
     background: var(--blue-light);
     border: 0;
-    padding: 0 2rem;
+    padding: .5rem 1.5rem;
     border-radius: 0.25rem;
-    height: 3rem;
     cursor: pointer;
 
     transition: filter 0.2s;
@@ -26,5 +26,33 @@
     &:hover {
       filter: brightness(0.9);
     }
+  }
+}
+
+.logo {
+  width: 7.875rem;
+  height: 34px;
+
+  display: block;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .content {
+    button {
+      height: 3rem;
+      padding: 0 2rem;
+      font-size: 1rem;
+    }
+  }
+
+  .logo {
+    width: 9.75rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .logo {
+    width: 11.625rem;
   }
 }

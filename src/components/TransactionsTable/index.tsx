@@ -8,7 +8,14 @@ export function TransactionsTable() {
     <div className={styles.container}>
       <section>
       <div className={styles.head}>
-        <span>Título</span>
+        <h2>Listagem</h2>
+        <p>
+          {transactions.length <= 1 ? 
+          `${transactions.length} item` : 
+          `${transactions.length} itens`
+          }
+        </p>
+        <span>Descrição</span>
         <span>Valor</span>
         <span>Categoria</span>
         <span>Data</span>

@@ -1,36 +1,74 @@
 .container {
-  margin-top: 4rem;
+  margin: 4rem 1rem 2rem;
 
   section {
     width: 100%;
     border-spacing: 0 0.5rem;
 
     .head {
-      display: grid;
-      grid-template-columns: 1fr repeat(3, .5fr);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0 1.5rem;
 
-      padding: 1rem 2rem;
+      span {
+        display: none;
+      }
 
-      font-weight: 400;
-      font-size: 0.875rem;
-      line-height: 1.5rem;
-      text-align: left;
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
 
-      color: var(--text-head);
+      p {
+        font-size: 1rem;
+        color: var(--text-head);
+      }
     }
 
     .grid {
       display: grid;
-      grid-template-columns: 1fr repeat(3, .5fr);
+      grid-template-columns: 1fr .5fr;
+      grid-template-areas:
+        'first first'
+        'second second'
+        'third fourth'
+      ;
+
+      column-gap: 10px;
 
       border: 0;
-      border-radius: 0.25rem;
+      border-radius: 0.5rem;
       padding: 1rem 2rem;
-
-      font-size: 1.125rem;
 
       color: var(--text-table);
       background: var(--white);
+
+      span:nth-child(1) {
+        grid-area: first;
+        font-size: 1rem;
+      }
+
+      span:nth-child(2) {
+        grid-area: second;
+        font-size: 1.5rem;
+        margin: 4px 0 19px;
+      }
+
+      span:nth-child(3) {
+        grid-area: third;
+      }
+
+      span:nth-child(4) {
+        grid-area: fourth;
+        text-align: end;
+      }
+
+      span:nth-child(3),
+      :nth-child(4) {
+        font-size: 1rem;
+        color: var(--text-head)
+      }
 
       &+.grid {
         margin-top: 1.25rem;
@@ -46,6 +84,55 @@
 
       .withdraw {
         color: var(--red);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    section {
+      .head {
+        display: grid;
+        grid-template-columns: 1fr repeat(3, .5fr);
+
+        padding: 1rem 0;
+
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        text-align: left;
+
+        color: var(--text-head);
+
+        span {
+          display: block;
+        }
+
+        h2,
+        p {
+          display: none;
+        }
+      }
+
+      .grid {
+        grid-template-columns: 1fr repeat(3, .5fr);
+        grid-template-areas: 'first second third fourth';
+
+        span:nth-child(1),
+        :nth-child(2),
+        :nth-child(3),
+        :nth-child(4) {
+          font-size: 1.125rem;
+        }
+
+        span:nth-child(2) {
+          margin: 0;
+        }
+
+        span:nth-child(4) {
+          text-align: start;
+        }
       }
     }
   }
