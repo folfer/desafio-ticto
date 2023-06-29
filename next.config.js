@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
+const nextConfig = { reactStrictMode: true };
 const path = require("path");
 
 module.exports = {

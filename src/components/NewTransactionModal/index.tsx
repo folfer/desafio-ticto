@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import styles from "./styles.module.scss";
 import { useTransactions } from "@/hooks/useTransactions";
 
+import close from "../../../public/close.svg";
 import incomeImg from "../../../public/up.svg";
 import outcomeImg from "../../../public/down.svg";
 import Image from "next/image";
@@ -22,6 +23,18 @@ export function NewTransactionModal({
   const [amount, setAmount] = useState(0);
   const [type, setType] = useState("deposit");
   const [category, setCategory] = useState("");
+  const [isDepositActive, setIsDepositActive] = useState(false);
+  const [isWithdrawActive, setIsWithdrawActive] = useState(false);
+
+  function handleDepositActive() {
+    setIsDepositActive(!isDepositActive);
+    setIsWithdrawActive(false);
+  };
+
+  function handleWithdrawActive() {
+    setIsWithdrawActive(!isWithdrawActive);
+    setIsDepositActive(false);
+  };
 
   async function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
@@ -51,45 +64,48 @@ export function NewTransactionModal({
         onClick={onRequestClose}
         className="react-modal-close"
       >
-        X
+        <Image src={close} alt="Fechar" />
       </button>
 
       <form data-testId="newTransactionModal_component" className={styles.container} onSubmit={handleCreateNewTransaction}>
         <h2>Cadastrar transação</h2>
 
         <input
-          placeholder="Título"
+          placeholder="Nome"
           value={title}
           onChange={(event) => setTitle(event.target.value)}
         />
 
         <input
           type="number"
-          placeholder="Valor"
+          placeholder="Preço"
           value={amount}
           onChange={(event) => setAmount(Number(event.target.value))}
         />
 
-        <div className={styles.radioBox}>
+        <div className={styles.transactionTypeContainer}>
           <button
-            className={styles.radioBox}
+            className={styles[isDepositActive ? 'deposit' : 'radioBox']}
             type="button"
             onClick={() => {
               setType("deposit");
+              handleDepositActive();
             }}
           >
-            <Image src={incomeImg} alt="Entrada" />
+
+            <Image src={outcomeImg} alt="Entrada" />
             <span>Entrada</span>
           </button>
 
           <button
-            className={styles.radioBox}
+            className={styles[isWithdrawActive ? 'withdraw' : 'radioBox']}
             type="button"
             onClick={() => {
               setType("withdraw");
+              handleWithdrawActive();
             }}
           >
-            <Image src={outcomeImg} alt="Saída" />
+            <Image src={incomeImg} alt="Saída" />
             <span>Saída</span>
           </button>
         </div>

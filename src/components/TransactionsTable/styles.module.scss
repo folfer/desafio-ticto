@@ -1,38 +1,47 @@
-
 .container {
-    margin-top: 4rem;
+  margin-top: 4rem;
 
-  table {
+  section {
     width: 100%;
     border-spacing: 0 0.5rem;
 
-    th {
-      color: #B9B9B9;
-      font-weight: 400;
+    .head {
+      display: grid;
+      grid-template-columns: 1fr repeat(3, .5fr);
+
       padding: 1rem 2rem;
-      text-align: left;
-      line-height: 1.5rem;
+
+      font-weight: 400;
       font-size: 0.875rem;
+      line-height: 1.5rem;
+      text-align: left;
+
+      color: var(--text-head);
     }
 
-    td {
-      padding: 1rem 2rem;
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr repeat(3, .5fr);
+
       border: 0;
-      background: #ffffff;
-      color: #4C5A5A;
       border-radius: 0.25rem;
+      padding: 1rem 2rem;
+
       font-size: 1.125rem;
 
+      color: var(--text-table);
+      background: var(--white);
+
       &:first-child {
-        color: #4C5A5A;
+        color: var(--text-table);
       }
 
-      &.deposit {
-        color: #06D7A5;
+      .deposit {
+        color: var(--green);
       }
 
-      &.withdraw {
-        color: #DB3766;
+      .withdraw {
+        color: var(--red);
       }
     }
   }

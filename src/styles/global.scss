@@ -1,43 +1,95 @@
+:root {
+  --red: #E52E4D;
+  --green: #33CC95;
+  --blue: #30107D;
+
+  --blue-light: #401A9B;
+
+  --text-title: #4E5555;
+  --text-table: #4C5A5A;
+  --text-head: #B9B9B9;
+  --text-body: #555555;
+
+  --input-background: #F7F7F7;
+  --border: #D7D7D7;
+
+  --background: #F1F5F8;
+  --white: #FFFFFF;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 600;
+}
+
+
+button {
+  cursor: pointer;
+
+  &[disabeld] {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 }
 
 .react-modal-overlay {
-    background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-modal-content {
+  width: 100%;
+  max-width: 576px;
+  background: #FDFDFD;
+  padding: 3rem;
+  position: relative;
+  border-radius: 0.24rem;
+}
+
+.react-modal-close {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  border: 0;
+  background: transparent;
+
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.8);
   }
-
-  .react-modal-content {
-    width: 100%;
-    max-width: 576px;
-    background: #FDFDFD;
-    padding: 3rem;
-    position: relative;
-    border-radius: 0.24rem;
-  }
-  
-  .react-modal-close {
-    position: absolute;
-    right: 1.5rem;
-    top: 1.5rem;
-    border: 0;
-    background: transparent;
-
-    transition: filter 0.2s;
-
-    &:hover {
-      filter: brightness(0.8);
-    }
-  }
+}

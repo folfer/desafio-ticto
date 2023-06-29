@@ -9,13 +9,13 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-  
-    background: #FFFFFF;
+
+    background: var(--white);
     padding: 1.5rem 2rem;
     border-radius: 8px;
-    color: #4E5555;
+    color: var(--text-title);
     gap: 30px;
-    
+
     header {
       width: 100%;
 
@@ -33,8 +33,8 @@
     }
 
     &:last-child {
-      background: #06D6A2;
-      color: #ffffff;
+      background: var(--green);
+      color: var(--white);
     }
   }
 }

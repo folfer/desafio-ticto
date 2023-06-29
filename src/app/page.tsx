@@ -1,7 +1,6 @@
 "use client";
 
 import { Header } from "@/components/Header";
-import styles from "./styles.module.scss";
 import { Dashboard } from "@/components/Dashboard";
 import { TransactionsProvider } from "@/hooks/useTransactions";
 import { useState } from "react";
@@ -21,14 +20,12 @@ export default function HomePage() {
 
   return (
     <TransactionsProvider>
-      <section className={styles.container}>
-        <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
-        <Dashboard />
-        <NewTransactionModal
-          isOpen={isNewTransactionsModalOpen}
-          onRequestClose={handleCloseNewTransactionModal}
-        />
-      </section>
+      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
+      <Dashboard />
+      <NewTransactionModal
+        isOpen={isNewTransactionsModalOpen}
+        onRequestClose={handleCloseNewTransactionModal}
+      />
     </TransactionsProvider>
   );
 }

@@ -1,5 +1,5 @@
 .container {
-  background: #30107D;
+  background: var(--blue);
 }
 
 .content {
@@ -13,8 +13,8 @@
 
   button {
     font-size: 1rem;
-    color: #fff;
-    background: #401A9B;
+    color: var(--white);
+    background: var(--blue-light);
     border: 0;
     padding: 0 2rem;
     border-radius: 0.25rem;
