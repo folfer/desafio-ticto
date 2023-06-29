@@ -9,9 +9,8 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "jest --watch",
+    "test": "jest",
     "test:coverage": "CI=true npm test -- --env=jsdom --coverage"
-
   },
   "dependencies": {
     "@types/node": "20.3.2",
