@@ -32,6 +32,10 @@
       color: var(--text-table);
       background: var(--white);
 
+      &+.grid {
+        margin-top: 1.25rem;
+      }
+
       &:first-child {
         color: var(--text-table);
       }

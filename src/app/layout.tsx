@@ -1,9 +1,16 @@
 import "../styles/global.scss";
-import { Roboto } from "next/font/google";
+import { Roboto, Poppins } from "next/font/google";
 
-export const roboto = Roboto({
-  weight: "400",
+const roboto = Roboto({
+  weight: ["400", "500"],
   subsets: ["latin"],
+  variable: "--roboto"
+});
+
+const poppins = Poppins({
+  weight: ["400", "500"],
+  subsets: ["latin"],
+  variable: "--poppins",
 });
 
 export const metadata = {
@@ -17,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={roboto.className}>{children}</body>
+    <html lang="pt_BR">
+      <body className={`${roboto.variable} ${poppins.variable}`}>{children}</body>
     </html>
   );
 }

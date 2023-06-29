@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-top: -7rem;
+  margin-top: -4.25rem;
 
   div {
     display: flex;
@@ -30,6 +30,7 @@
       font-size: 42px;
       font-weight: 500;
       line-height: 3rem;
+      font-family: var(--poppins);
     }
 
     &:last-child {
